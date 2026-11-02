@@ -1,6 +1,7 @@
 # Copyright (c) 2009 rupa deadwyler. Licensed under the WTFPL license, Version 2
 
-# maintains a jump-list of the directories you actually use
+# maintains a jump-list of directories you use often
+# Study: keep directory navigation predictable
 #
 # INSTALL:
 #     * put something like this in your .bashrc/.zshrc:
@@ -35,7 +36,7 @@ _z() {
 
     local datafile="${_Z_DATA:-$HOME/.z}"
 
-    # if symlink, dereference
+    # Resolve a symlink before updating the history file
     [ -h "$datafile" ] && datafile=$(readlink "$datafile")
 
     # bail if we don't own ~/.z and $_Z_OWNER not set
@@ -52,7 +53,7 @@ _z() {
         return 0
     }
 
-    # add entries
+    # add entries after checking the navigation history
     if [ "$1" = "--add" ]; then
         shift
 
@@ -265,3 +266,5 @@ elif type complete >/dev/null 2>&1; then
         }
     }
 fi
+
+# Study: amend demonstration

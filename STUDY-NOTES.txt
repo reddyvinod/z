@@ -1,0 +1,2 @@
+Lazygit study fixture
+One keyboard action, visible result.

@@ -3,7 +3,7 @@ Z(1)                             User Commands                            Z(1)
 
 
 NAME
-       z - jump around
+       z - jump around frequently used directories
 
 SYNOPSIS
        z [-chlrtx] [regex1 regex2 ... regexn]
@@ -42,7 +42,7 @@ EXAMPLES
 
        z -r foo      cd to highest ranked dir matching foo
 
-       z -t foo      cd to most recently accessed dir matching foo
+       z -t foo      cd to the most recently visited matching directory
 
        z -l foo      list all dirs matching foo (by frecency)
 
@@ -54,7 +54,7 @@ NOTES
 
        cd around for a while to build up the db.
 
-       PROFIT!!
+       Open a fresh shell and try z foo.
 
        Optionally:
               Set $_Z_CMD to change the command name (default z).
